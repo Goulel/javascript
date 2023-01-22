@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Javascript</title>
+</head>
+
+<body>
+    
+    <div class="TXT">
+        <h1 id="Bienv">Ce texte est inutile</h1>
+        <p>Ce text est inutile</p>
+    </div>
+
+    <script>
+
+        const classe = document.querySelector(".TXT") //selection de la classe "TXT"
+        classe.classList.remove("TXT") //suppréssion de la classe "TXT"
+
+        const textes=document.querySelectorAll("h1, p") //séléction de h1 et p
+        
+        textes.forEach(texte => {
+            texte.innerHTML = "Bienvenu sur ce site, met ta souris sur moi (pas celui du bas)"
+        }); //boucle pour changer le text
+
+        const welcomeText = document.querySelector("#Bienv") //sélection de l'id Bienv
+
+        Bienv.addEventListener("mouseover", (event)=> { //permet d'avoir l'efffet de hover
+            Bienv.style.color = `rgb(
+            ${Math.floor(Math.random() * 250)},
+            ${Math.floor(Math.random() * 250)},
+            ${Math.floor(Math.random() * 250)}
+            )`
+        }) //couleurs qui changent aléatoirement quand l'on passe sa souris dessus
+
+    </script>
+
+</body> 
